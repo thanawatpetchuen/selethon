@@ -10,6 +10,7 @@ import requests
 import shutil
 import re
 import os
+import sys
 import time
 
 def make_dir(path):
@@ -82,5 +83,16 @@ class Selenus:
     el = self.find_element(element)
     el.send_keys(text)
 
+def main():
+  if len(sys.argv) == 1:
+    here = os.path.abspath(os.path.dirname(__file__))
+    about = {}
+    with open(os.path.join(here, '__version__.py')) as f:
+        exec(f.read(), about)
+    print("Selenus v%s" % about['__version__'])
+  elif str(sys.argv[1]) == "webdriver":
+    os.system('webdrivermanager %s --linkpath AUTO' % str(sys.argv[2]))
+
+
 if __name__ == "__main__":
-  savior = Selenus();
+  print("Please run this module by cli")

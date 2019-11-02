@@ -22,7 +22,7 @@ VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'selenium'
+    'selenium', 'webdrivermanager'
 ]
 
 # What packages are optional?
@@ -106,9 +106,9 @@ setup(
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
 
-    # entry_points={
-    #     'console_scripts': ['mycli=mymodule:cli'],
-    # },
+    entry_points={
+        'console_scripts': ['selenus=selenus:main'],
+    },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
