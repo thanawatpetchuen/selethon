@@ -14,13 +14,13 @@ This program needs Python 3 and following libraries
 
 First, install this project by pip
 
-```bash
+```
 pip install selenus
 ```
 
 Download webdriver for selenus
 
-```bash
+```
 selenus webdriver chrome
 ```
 
