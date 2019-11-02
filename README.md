@@ -15,7 +15,7 @@ This program needs Python 3 and following libraries
 First, install this project by pip
 
 ```
-pip install savior
+pip install selenus
 ```
 
 ## Authors
