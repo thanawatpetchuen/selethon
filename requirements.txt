@@ -1,0 +1,6 @@
+selenium
+requests
+shutil
+re
+os
+time
