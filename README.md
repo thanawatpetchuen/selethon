@@ -1,4 +1,4 @@
-# Savior
+# Selenus
 
 The greatest automated browser controller using Selenium.
 
@@ -7,15 +7,44 @@ The greatest automated browser controller using Selenium.
 
 This program needs Python 3 and following libraries
 
-* [Selenium](https://pypi.org/project/selenium/) - Selenium library for Python
+* [WebDriverManager](https://pypi.org/project/webdrivermanager/) - Webdriver manager for Python
 
 
 ### Installing
 
 First, install this project by pip
 
-```
+```console
 pip install selenus
+```
+
+Download webdriver for selenus
+
+```console
+webdrivermanager chrome --linkpath AUTO
+```
+
+## Documentation
+Init the browser by
+```python
+from selenus import Selenus
+
+browser = Selenus()
+```
+
+Open the url
+```python
+browser.open("https://www.google.com")
+```
+
+Type text into input
+```python
+browser.type("input.gLFyf", "thanawatpetchuen site:github.com")
+```
+
+Click element
+```python
+browser.click("div.FPdoLc>center>input:nth-child(1)")
 ```
 
 ## Authors
