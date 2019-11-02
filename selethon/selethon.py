@@ -17,7 +17,7 @@ def make_dir(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-class Selenus:
+class Selethon:
   def __init__(self, headless=False, init_url="https://www.google.com"):
     self.width = 1920
     self.height = 1080
@@ -89,7 +89,7 @@ def main():
     about = {}
     with open(os.path.join(here, '__version__.py')) as f:
         exec(f.read(), about)
-    print("Selenus v%s" % about['__version__'])
+    print("Selethon v%s" % about['__version__'])
   elif str(sys.argv[1]) == "webdriver":
     os.system('webdrivermanager %s --linkpath AUTO' % str(sys.argv[2]))
 

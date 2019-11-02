@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'selenus'
+NAME = 'selethon'
 DESCRIPTION = 'automated controll website'
 URL = ''
 EMAIL = 'thanawat1petchuen@gmail.com'
@@ -97,7 +97,7 @@ setup(
     version=about['__version__'],
     description=DESCRIPTION,
     long_description=long_description,
-    # long_description_content_type='text/markdown',
+    long_description_content_type='text/markdown',
     author=AUTHOR,
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
@@ -107,7 +107,7 @@ setup(
     # py_modules=['mypackage'],
 
     entry_points={
-        'console_scripts': ['selenus=selenus:main'],
+        'console_scripts': ['selethon=selethon:main'],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
