@@ -1,35 +1,27 @@
-# Selenus
+# Selethon
 
 The greatest automated browser controller using Selenium.
-
-
-## Prerequisites
-
-This program needs Python 3 and following libraries
-
-* [WebDriverManager](https://pypi.org/project/webdrivermanager/) - Webdriver manager for Python
-
 
 ### Installing
 
 First, install this project by pip
 
 ```
-pip install selenus
+pip install selethon
 ```
 
-Download webdriver for selenus
+Download webdriver for selethon
 
 ```
-selenus webdriver chrome
+selethon install chrome
 ```
 
 ## Documentation
 Init the browser by
 ```python
-from selenus import Selenus
+from selethon import Selethon
 
-browser = Selenus()
+browser = Selethon()
 ```
 
 Open the url
