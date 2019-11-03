@@ -90,9 +90,6 @@ def main():
     with open(os.path.join(here, '__version__.py')) as f:
         exec(f.read(), about)
     print("Selethon v%s" % about['__version__'])
-  elif str(sys.argv[1]) == "webdriver":
-    os.system('webdrivermanager %s --linkpath AUTO' % str(sys.argv[2]))
-
 
 if __name__ == "__main__":
-  print("Please run this module by cli")
+  print("Please run this module by import")

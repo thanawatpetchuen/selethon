@@ -22,7 +22,7 @@ VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'selenium', 'webdrivermanager'
+    'selenium',
 ]
 
 # What packages are optional?
