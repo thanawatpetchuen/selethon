@@ -90,6 +90,14 @@ def main():
     with open(os.path.join(here, '__version__.py')) as f:
         exec(f.read(), about)
     print("Selethon v%s" % about['__version__'])
+  elif str(sys.argv[1]) == "install":
+    try:
+      if str(sys.argv[2]) == "chrome":
+        from webdrivermanager import ChromeDriverManager
+        cdd = ChromeDriverManager(link_path='AUTO')
+        cdd.download_and_install()
+    except IndexError:
+      print("Please provide webdriver")
 
 if __name__ == "__main__":
   print("Please run this module by import")
