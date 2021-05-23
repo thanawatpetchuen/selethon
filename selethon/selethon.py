@@ -65,7 +65,14 @@ class Selethon:
     try:
         return self.driver.find_element(By.CSS_SELECTOR, element)
     except NoSuchElementException:
-        return False
+        return None
+
+  def find_elements(self, element):
+    try:
+        return self.driver.find_elements(By.CSS_SELECTOR, element)
+    except NoSuchElementException:
+        return []
+  
 
   def set_element_to_center_of_view(self, element):
     el = self.find_element(element)
@@ -82,6 +89,9 @@ class Selethon:
   def type(self, element, text):
     el = self.find_element(element)
     el.send_keys(text)
+
+  def close(self):
+    self.driver.close()
 
 def main():
   if len(sys.argv) == 1:
